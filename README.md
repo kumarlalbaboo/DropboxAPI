@@ -1,8 +1,14 @@
+DropboxAPIClient.java
+-----------------------
 
-get_current_account works with personal accounts.
+    get_current_account works with personal accounts.
+    
+    team/get_info only works with Business/Team accounts only.
+    
+    I am using personal account tahts why team APIs will return 401 for team/get_info
+    
+    App Configuration: - My Dropbox app is not configured as a Business API thats why i am getting 401 error.
 
-team/get_info only works with Business/Team accounts only.
-
-I am using personal account tahts why team APIs will return 401 for team/get_info
-
-App Configuration: - My Dropbox app is not configured as a Business API thats why i am getting 401 error.
+DropboxIntegration.java
+--------------------------
+in DropboxIntegration I took direct access token and Integration with https://api.dropboxapi.com/2/team/get_info
